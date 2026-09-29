@@ -194,12 +194,6 @@ pip install datasets transformers torch pandas numpy scikit-learn matplotlib
 7. Both models are evaluated.
 8. Tables and figures are generated automatically.
 
-### GPU
-
-The experiment is computationally expensive, particularly for XLM-RoBERTa-large. A CUDA-enabled GPU is recommended for practical runtime.
-
-The notebook automatically uses CUDA when available and otherwise falls back to CPU.
-
 ## Limitations
 
 1. **Explicit negation only:** The lexical marker approach may miss implicit, morphological, or syntactic negation.
@@ -207,23 +201,3 @@ The notebook automatically uses CUDA when available and otherwise falls back to 
 3. **Small negation categories:** Some negation types have very few observations, limiting the reliability of category-level comparisons.
 4. **Benchmark-specific evaluation:** The results reflect this particular benchmark and model setting.
 5. **No causal claim:** Differences between negated and non-negated examples are descriptive and do not by themselves establish that negation causes the observed performance changes.
-
-## Poster
-
-**Title:**  
-**Can NLI Models Handle Negation? A Cross-Lingual Study of English and German**
-
-The poster presents the hypothesis, methodology, experimental results, figures, and limitations of this study.
-
-The project is part of the **Trends in Natural Language Processing** course at the University of Trier.
-
-## Reproducibility
-
-- Dataset: XNLI
-- Languages: English and German
-- Evaluation size: 600 examples
-- Sampling seed: `42`
-- Models: XLM-RoBERTa and mDeBERTa
-- Metrics: Accuracy and Macro-F1
-- Negation analysis: explicit lexical markers
-- Inference: batch processing
