@@ -196,8 +196,8 @@ pip install datasets transformers torch pandas numpy scikit-learn matplotlib
 
 ## Limitations
 
-1. **Explicit negation only:** The lexical marker approach may miss implicit, morphological, or syntactic negation.
-2. **Balanced subset:** The main experiment uses 600 examples rather than the complete 10,020-example combined test set.
-3. **Small negation categories:** Some negation types have very few observations, limiting the reliability of category-level comparisons.
-4. **Benchmark-specific evaluation:** The results reflect this particular benchmark and model setting.
-5. **No causal claim:** Differences between negated and non-negated examples are descriptive and do not by themselves establish that negation causes the observed performance changes.
+- Negation is detected using explicit lexical markers and may miss implicit or syntactic negation.
+- The experiment uses a balanced subset of 600 XNLI test examples rather than the complete test set.
+- Some negation-type categories contain relatively few examples, limiting the strength of category-level conclusions.
+- Dataset overlap: XNLI-fine-tuned models may have seen parts of the evaluation data during training, limiting the validity of XNLI as an unseen test set.
+
