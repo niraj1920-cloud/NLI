@@ -1,7 +1,7 @@
 # Can NLI Models Handle Negation?
 ## A Cross-Lingual Study of English and German
 
-This repository contains the code and experimental results for an NLP research poster investigating how explicit negation affects Natural Language Inference (NLI) performance in English and German.
+This repository contains the code and experimental results on how explicit negation affects Natural Language Inference (NLI) performance in English and German.
 
 ## Research Questions
 
