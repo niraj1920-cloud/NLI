@@ -114,13 +114,24 @@ Performance is analyzed at four levels:
 H1: Not supported.
 Negation did not reduce NLI performance. XLM-RoBERTa showed no change, while mDeBERTa achieved slightly higher performance on negated examples (+1.00 pp Accuracy).
 
-### RQ2 — Cross-Lingual Robustness
+### RQ2: Does negation robustness differ between English and German?
 
-XLM-RoBERTa remains highly stable across English and German.
+We compared NLI performance between English and German for both models.
 
-mDeBERTa shows a larger language difference, with lower performance on German examples than on English examples in the corresponding conditions.
+| Model | Language | N | Accuracy (%) | Macro F1 (%) |
+|---|---|---:|---:|---:|
+| XLM-RoBERTa | English | 300 | 100.00 | 100.00 |
+| XLM-RoBERTa | German | 300 | 100.00 | 100.00 |
+| mDeBERTa | English | 300 | 89.33 | 89.35 |
+| mDeBERTa | German | 300 | 80.33 | 80.33 |
 
-These results provide evidence for **language-dependent NLI robustness**, particularly for mDeBERTa.
+#### RQ2 Finding
+
+- XLM-RoBERTa achieved identical performance in English and German.
+- mDeBERTa achieved higher performance in English (89.33%) than in German (80.33%).
+- Overall, the results show that model performance differs between English and German.
+
+**H2: Supported.** Performance differed between English and German, particularly for mDeBERTa, while XLM-RoBERTa showed identical performance across both languages.
 
 ### RQ3: Which types of negation are most challenging for NLI models?
 
