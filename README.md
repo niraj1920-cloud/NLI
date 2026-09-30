@@ -111,7 +111,8 @@ Performance is analyzed at four levels:
 | mDeBERTa | Non-negated | 300 | 84.33 | 84.30 |
 | mDeBERTa | Negated | 300 | 85.33 | 85.29 |
 
-The effect of negation is **not uniform**. It varies according to model and language. Therefore, H1 is **not uniformly supported**.
+H1: Not supported.
+Negation did not reduce NLI performance. XLM-RoBERTa showed no change, while mDeBERTa achieved slightly higher performance on negated examples (+1.00 pp Accuracy).
 
 ### RQ2 — Cross-Lingual Robustness
 
