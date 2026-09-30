@@ -122,21 +122,44 @@ mDeBERTa shows a larger language difference, with lower performance on German ex
 
 These results provide evidence for **language-dependent NLI robustness**, particularly for mDeBERTa.
 
-### RQ3 — Negation Types
+### RQ3: Which types of negation are most challenging for NLI models?
 
-For sufficiently represented categories, mDeBERTa shows variation across negation types.
+We analyzed model performance across different explicit lexical negation types in English and German.
 
-| Language | Negation type | N | mDeBERTa Accuracy |
-|---|---|---:|---:|
-| English | `not` | 102 | 89.22% |
-| English | `no` | 27 | 96.30% |
-| English | `never` | 13 | 92.31% |
-| German | `nicht` | 101 | 79.21% |
-| German | `kein` | 27 | 85.19% |
+| Model | Language | Negation Type | N | Accuracy (%) | Macro F1 (%) |
+|---|---|---|---:|---:|---:|
+| XLM-RoBERTa | English | neither | 1 | 100.00 | 100.00 |
+| mDeBERTa | English | neither | 1 | 0.00 | 0.00 |
+| XLM-RoBERTa | English | never | 13 | 100.00 | 100.00 |
+| mDeBERTa | English | never | 13 | 92.31 | 85.19 |
+| XLM-RoBERTa | English | no | 27 | 100.00 | 100.00 |
+| mDeBERTa | English | no | 27 | 96.30 | 96.89 |
+| XLM-RoBERTa | English | not | 102 | 100.00 | 100.00 |
+| mDeBERTa | English | not | 102 | 89.22 | 89.24 |
+| XLM-RoBERTa | English | nothing | 7 | 100.00 | 100.00 |
+| mDeBERTa | English | nothing | 7 | 100.00 | 100.00 |
+| XLM-RoBERTa | German | kein | 27 | 100.00 | 100.00 |
+| mDeBERTa | German | kein | 27 | 85.19 | 83.84 |
+| XLM-RoBERTa | German | nicht | 101 | 100.00 | 100.00 |
+| mDeBERTa | German | nicht | 101 | 79.21 | 79.19 |
+| XLM-RoBERTa | German | nichts | 8 | 100.00 | 100.00 |
+| mDeBERTa | German | nichts | 8 | 100.00 | 100.00 |
+| XLM-RoBERTa | German | nie | 8 | 100.00 | 100.00 |
+| mDeBERTa | German | nie | 8 | 62.50 | 58.57 |
+| XLM-RoBERTa | German | niemand | 5 | 100.00 | 100.00 |
+| mDeBERTa | German | niemand | 5 | 80.00 | 33.33 |
+| XLM-RoBERTa | German | weder | 1 | 100.00 | 100.00 |
+| mDeBERTa | German | weder | 1 | 0.00 | 0.00 |
 
-XLM-RoBERTa achieved 100% accuracy across the observed negation categories in this evaluation subset.
+#### RQ3 Findings
 
-Very small categories are interpreted cautiously because some contain only a few examples.
+- **XLM-RoBERTa** achieved 100% accuracy and Macro F1 across all observed negation types.
+- **mDeBERTa** showed substantial variation across negation types.
+- For English, mDeBERTa performed lowest on **"not" (89.22%)** among categories with sufficient observations.
+- For German, **"nie" (62.50%)** had the lowest accuracy among categories with more than one example.
+- The categories **"neither"** and **"weder"** contain only one example each and therefore should not be interpreted as reliable evidence.
+
+**H3: Supported descriptively.** Performance varies across negation types, particularly for mDeBERTa. However, categories with very small sample sizes limit the reliability of individual comparisons.
 
 ## Repository Structure
 
