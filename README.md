@@ -15,7 +15,7 @@ This repository contains the code and experimental results on how explicit negat
 - **H2:** Negation robustness differs between English and German.
 - **H3:** Performance varies by negation type.
 
-The experiments provide mixed evidence for H1: the effect of negation depends on the model and language. H2 is supported by observed cross-lingual differences, particularly for mDeBERTa. H3 is supported with the qualification that some negation categories contain few examples.
+The experiments show that H1 is not supported, as negation did not reduce NLI performance overall. H2 is supported, with cross-lingual performance differences observed particularly for mDeBERTa. H3 is supported descriptively, as performance varied across negation types, although some categories contained few examples.
 
 ## Dataset
 
