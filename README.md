@@ -104,12 +104,12 @@ Performance is analyzed at four levels:
 
 ### RQ1 — Effect of Negation
 
-| Model | Language | Non-negated | Negated | Difference |
+| Model | Negation | N | Accuracy | Macro F1 |
 |---|---|---:|---:|---:|
-| XLM-RoBERTa | English | 100.00% | 100.00% | 0.00 pp |
-| XLM-RoBERTa | German | 98.67% | 99.33% | +0.66 pp |
-| mDeBERTa | English | 93.33% | 90.00% | −3.33 pp |
-| mDeBERTa | German | 77.33% | 84.00% | +6.67 pp |
+| XLM-RoBERTa | Non-negated | 300 | 100.00 | 100.00 |
+| XLM-RoBERTa | Negated | 300 | 100.00 | 100.00 |
+| mDeBERTa | Non-negated | 300 | 84.33 | 84.30 |
+| mDeBERTa | Negated | 300 | 85.33 | 85.29 |
 
 The effect of negation is **not uniform**. It varies according to model and language. Therefore, H1 is **not uniformly supported**.
 
