@@ -168,7 +168,7 @@ We analyzed model performance across different explicit lexical negation types i
 - For German, **"nie" (62.50%)** had the lowest accuracy among categories with more than one example.
 - The categories **"neither"** and **"weder"** contain only one example each and therefore should not be interpreted as reliable evidence.
 
-**H3: Supported descriptively.** Performance varies across negation types, particularly for mDeBERTa. However, categories with very small sample sizes limit the reliability of individual comparisons.
+**H3: Supported** Performance varies across negation types, particularly for mDeBERTa.
 
 ## Repository Structure
 
